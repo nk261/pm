@@ -289,6 +289,10 @@ async def get_all_project_plans():
 async def get_all_project_requirements():
     """Get all project requirements"""
     requirements = await db.project_requirements.find().to_list(100)
+    # Convert ObjectId to string for JSON serialization
+    for req in requirements:
+        if '_id' in req:
+            del req['_id']
     return requirements
 
 # Include the router in the main app
