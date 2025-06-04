@@ -118,7 +118,7 @@ def get_gemini_chat():
         - Defining success metrics and KPIs
         
         Always provide structured, actionable project plans that demonstrate superior analysis compared to human project managers."""
-    ).with_model("gemini", "gemini-2.5-pro-preview-05-06").with_max_tokens(8000)
+    ).with_model("gemini", "gemini-2.0-flash").with_max_tokens(8000)
 
 async def generate_project_plan(requirements: ProjectRequirements) -> Dict[str, Any]:
     """AI Planning Agent - Core function that replaces human project planning"""
