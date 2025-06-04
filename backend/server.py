@@ -277,6 +277,9 @@ async def get_project_plan(plan_id: str):
     plan = await db.project_plans.find_one({"id": plan_id})
     if not plan:
         raise HTTPException(status_code=404, detail="Project plan not found")
+    # Convert ObjectId to string for JSON serialization
+    if '_id' in plan:
+        del plan['_id']
     return plan
 
 @api_router.get("/project-plans")
