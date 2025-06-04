@@ -232,6 +232,9 @@ async def get_project_requirements(requirements_id: str):
     requirements = await db.project_requirements.find_one({"id": requirements_id})
     if not requirements:
         raise HTTPException(status_code=404, detail="Project requirements not found")
+    # Convert ObjectId to string for JSON serialization
+    if '_id' in requirements:
+        del requirements['_id']
     return ProjectRequirements(**requirements)
 
 @api_router.post("/generate-plan/{requirements_id}")
