@@ -166,16 +166,16 @@ class AIProjectManagerTester:
         return success
 
 def main():
-    # Sample project data for testing
+    # Sample project data for testing - using the specified test data
     sample_project = {
-        "title": "E-commerce Platform Development",
-        "description": "Build a modern e-commerce platform with user authentication, product catalog, shopping cart, and payment processing",
-        "business_context": "Need to compete with major e-commerce platforms and provide seamless shopping experience for customers",
-        "success_criteria": "Platform launches successfully, handles 1000+ concurrent users, achieves 99.9% uptime, generates $100K+ revenue in first quarter",
-        "constraints": "6-month deadline, $200K budget, team of 5 developers, must integrate with existing inventory system",
-        "stakeholders": "Product Manager, Engineering Team, Marketing Team, Finance Team, Executive Sponsor",
-        "timeline_preference": "6 months maximum, launch by Q3 2025",
-        "budget_range": "$150K - $200K"
+        "title": "Mobile Banking App Development",
+        "description": "Develop a secure mobile banking application with features like account management, fund transfers, bill payments, and transaction history",
+        "business_context": "Digital transformation initiative to compete with fintech startups and improve customer experience",
+        "success_criteria": "App launched successfully, 10,000+ downloads in first month, 4.5+ star rating, zero security incidents",
+        "constraints": "Strict security requirements, regulatory compliance needed, 8-month timeline, $300K budget limit",
+        "stakeholders": "Bank CEO, IT Director, Security Team, Compliance Officer, UX Design Team, Mobile Development Team",
+        "timeline_preference": "8 months maximum, must launch before competitor",
+        "budget_range": "$250K - $300K"
     }
 
     # Setup tester
