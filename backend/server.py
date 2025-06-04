@@ -283,6 +283,10 @@ async def get_project_plan(plan_id: str):
 async def get_all_project_plans():
     """Get all generated project plans"""
     plans = await db.project_plans.find().to_list(100)
+    # Convert ObjectId to string for JSON serialization
+    for plan in plans:
+        if '_id' in plan:
+            del plan['_id']
     return plans
 
 @api_router.get("/project-requirements")
